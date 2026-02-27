@@ -1,0 +1,7 @@
+.next/
+out/
+node_modules/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+saveweb2zip-com-firecrawl-dev/
