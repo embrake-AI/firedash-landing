@@ -9,6 +9,7 @@ const solutions = [
 	{ href: "/solutions/slack-triage", label: "Slack triage" },
 	{ href: "/solutions/ai-sre", label: "AI SRE" },
 	{ href: "/solutions/status-pages", label: "Status pages" },
+	{ href: "/solutions/post-incidents", label: "Post-incidents" },
 ] as const;
 
 export function SiteHeader() {
@@ -18,7 +19,8 @@ export function SiteHeader() {
 	useEffect(() => {
 		if (!open) return;
 		function handleClick(e: MouseEvent) {
-			if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+			if (ref.current && !ref.current.contains(e.target as Node))
+				setOpen(false);
 		}
 		document.addEventListener("click", handleClick);
 		return () => document.removeEventListener("click", handleClick);
@@ -35,10 +37,26 @@ export function SiteHeader() {
 
 				<nav className="fc-nav" aria-label="Primary">
 					<div ref={ref} className="relative">
-						<button type="button" onClick={() => setOpen((v) => !v)} className="fc-nav-link cursor-pointer">
+						<button
+							type="button"
+							onClick={() => setOpen((v) => !v)}
+							className="fc-nav-link cursor-pointer"
+						>
 							Solutions
-							<svg width="10" height="6" viewBox="0 0 10 6" fill="none" className={`ml-1 transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
-								<path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+							<svg
+								width="10"
+								height="6"
+								viewBox="0 0 10 6"
+								fill="none"
+								className={`ml-1 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
+							>
+								<path
+									d="M1 1l4 4 4-4"
+									stroke="currentColor"
+									strokeWidth="1.5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
 							</svg>
 						</button>
 						{open && (
@@ -65,7 +83,12 @@ export function SiteHeader() {
 				</nav>
 
 				<div className="fc-header-actions">
-					<a href={bookingUrl} target="_blank" rel="noopener noreferrer" className="fc-btn fc-btn-primary fc-btn-sm">
+					<a
+						href={bookingUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="fc-btn fc-btn-primary fc-btn-sm"
+					>
 						Book setup
 					</a>
 				</div>
