@@ -10,7 +10,7 @@ export function BentoSlackMockup() {
 	return (
 		<div className="text-xs" aria-hidden>
 			{/* Slack block kit message */}
-			<div className="p-3 border border-[var(--border-faint)] border-l-[3px] border-l-[var(--heat-100)] rounded-lg bg-white">
+			<div className="p-3 border border-[var(--border-faint)] bg-white">
 				<div className="flex items-center gap-1.5 mb-2">
 					<span className="text-[13px] font-semibold text-[#1264a3] underline decoration-[#1264a3]/30">API Response Latency Degraded</span>
 					<span className="text-xs leading-none">🔴</span>

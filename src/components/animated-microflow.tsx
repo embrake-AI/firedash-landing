@@ -37,7 +37,7 @@ export function AnimatedMicroflow({ className }: { className?: string }) {
 			{/* Panel 1: Slack message block */}
 			<div className={`microflow-panel ${visible(1)}`}>
 				<div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5 text-[var(--black-alpha-48)]">Slack</div>
-				<div className={`flex flex-col gap-1.5 rounded-[10px] border-l-[3px] border-l-[var(--heat-100)] p-3 text-xs min-w-[200px] ${card}`}>
+				<div className={`flex flex-col gap-1.5 border border-[var(--border-faint)] p-3 text-xs min-w-[200px] ${card}`}>
 					<span className="text-xs font-semibold text-[#1264a3] underline decoration-[#1264a3]/30">API Response Latency Degraded</span>
 					<div className="flex gap-4">
 						<div className="flex flex-col gap-px">
@@ -66,7 +66,7 @@ export function AnimatedMicroflow({ className }: { className?: string }) {
 			{/* Panel 2: AI SRE suggestion */}
 			<div className={`microflow-panel ${visible(3)}`}>
 				<div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5 text-[var(--black-alpha-48)]">AI SRE</div>
-				<div className={`flex flex-col gap-1.5 rounded-[10px] border-l-[3px] border-l-violet-600 p-3 text-xs min-w-[200px] ${card}`}>
+				<div className={`flex flex-col gap-1.5 border border-[var(--border-faint)] p-3 text-xs min-w-[200px] ${card}`}>
 					<span className="text-xs font-bold">🔥 suggestion</span>
 					<p className="m-0 text-[11px] leading-snug text-[var(--black-alpha-64)]">
 						Update status to <strong className="text-[var(--accent-black)]">mitigating</strong> — &ldquo;Rolled back deploy abc123. Latency returning to baseline.&rdquo;
@@ -87,7 +87,7 @@ export function AnimatedMicroflow({ className }: { className?: string }) {
 			{/* Panel 3: Status Page */}
 			<div className={`microflow-panel ${visible(5)}`}>
 				<div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5 text-[var(--black-alpha-48)]">Status Page</div>
-				<div className={`flex flex-col gap-1.5 rounded-[10px] border-l-[3px] border-l-amber-500 p-3 text-xs min-w-[200px] ${card}`}>
+				<div className={`flex flex-col gap-1.5 border border-[var(--border-faint)] p-3 text-xs min-w-[200px] ${card}`}>
 					<div className="text-[10px] font-semibold font-mono pb-1 border-b mb-0.5 text-[var(--black-alpha-48)] border-[var(--border-faint)]">status.acme.com</div>
 					<div className="flex flex-col gap-0.5">
 						<div className="flex items-center gap-1.5 text-[11px] font-medium">

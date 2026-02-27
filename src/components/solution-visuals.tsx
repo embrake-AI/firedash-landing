@@ -88,7 +88,7 @@ export function SlackTriageVisual() {
 							</span>
 						</p>
 						{/* Block Kit card */}
-						<div className="p-3 border border-[var(--border-faint)] border-l-[3px] border-l-[var(--heat-100)] rounded-md bg-white">
+						<div className="p-3 border border-[var(--border-faint)] bg-white">
 							<div className="flex items-center gap-1.5 mb-2">
 								<span className="text-[13px] font-semibold text-[#1264a3] underline decoration-[#1264a3]/30">
 									DB Connection Timeouts — EU
@@ -195,7 +195,7 @@ export function AiSreVisual() {
 						time="11:07 AM"
 						avatar={<SlackAvatar emoji="🔥" bg="bg-orange-100" />}
 					>
-						<div className="p-3 border border-[var(--border-faint)] border-l-[3px] border-l-[var(--heat-100)] rounded-md bg-white">
+						<div className="p-3 border border-[var(--border-faint)] bg-white">
 							<div className="mb-1.5">
 								<span className="text-xs font-bold">🔥 suggestion</span>
 							</div>
@@ -258,7 +258,7 @@ export function AiSreVisual() {
 						time="11:18 AM"
 						avatar={<SlackAvatar emoji="🔥" bg="bg-orange-100" />}
 					>
-						<div className="p-3 border border-[var(--border-faint)] border-l-[3px] border-l-[var(--heat-100)] rounded-md bg-white">
+						<div className="p-3 border border-[var(--border-faint)] bg-white">
 							<div className="mb-1.5">
 								<span className="text-xs font-bold">🔥 suggestion</span>
 							</div>
@@ -640,7 +640,7 @@ export function PostIncidentsVisual() {
 							].map((past) => (
 								<div
 									key={past.title}
-									className="p-2.5 rounded-md border border-slate-200 border-l-[3px] border-l-[var(--heat-100)] bg-slate-50/50"
+									className="p-2.5 border border-slate-200 bg-slate-50/50"
 								>
 									<div className="flex items-center justify-between">
 										<span className="text-xs font-medium text-slate-900">
