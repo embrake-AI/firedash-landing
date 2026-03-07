@@ -240,6 +240,7 @@ a {
 	border-radius: 999px;
 	font-size: 13px;
 	font-weight: 600;
+	line-height: 1;
 	transition:
 		background-color 160ms ease,
 		border-color 160ms ease,
@@ -897,6 +898,7 @@ a {
 	background: var(--accent-black);
 	font-size: 13px;
 	font-weight: 600;
+	line-height: 1;
 	color: #fff;
 	transition:
 		background-color 160ms ease,
@@ -919,6 +921,7 @@ a {
 	background: var(--background-lighter);
 	font-size: 13px;
 	font-weight: 600;
+	line-height: 1;
 	color: var(--accent-black);
 	transition:
 		background-color 160ms ease,

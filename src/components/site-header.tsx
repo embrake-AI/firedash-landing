@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FireGlyph } from "@/components/fire-glyph";
-import { bookingUrl } from "@/lib/site";
+import { bookingUrl, loginUrl } from "@/lib/site";
 
 const solutions = [
 	{ href: "/solutions/slack-triage", label: "Slack triage" },
@@ -83,6 +83,9 @@ export function SiteHeader() {
 				</nav>
 
 				<div className="fc-header-actions">
+					<a href={loginUrl} className="fc-nav-link">
+						Log in
+					</a>
 					<a
 						href={bookingUrl}
 						target="_blank"
