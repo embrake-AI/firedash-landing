@@ -366,6 +366,49 @@ a {
 	margin-top: 28px;
 }
 
+.fc-system-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 0;
+	border-radius: 999px;
+	background: transparent;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: var(--black-alpha-56);
+	transition: color 160ms ease;
+	white-space: nowrap;
+}
+
+.fc-system-status:hover {
+	color: var(--accent-black);
+}
+
+.fc-system-status-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 999px;
+	background: currentColor;
+}
+
+.fc-system-status-loading {
+	color: var(--black-alpha-48);
+}
+
+.fc-system-status-none {
+	color: #0f8a46;
+}
+
+.fc-system-status-minor {
+	color: #b26a00;
+}
+
+.fc-system-status-major,
+.fc-system-status-error {
+	color: #cb2d2d;
+}
+
 .fc-hero-clouds {
 	position: absolute;
 	left: 50%;
@@ -857,10 +900,29 @@ a {
 	color: var(--black-alpha-56);
 }
 
+.fc-footer-inner p {
+	margin: 0;
+}
+
+.fc-footer-status {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 auto;
+}
+
 .fc-footer-links {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	gap: 18px;
+	flex-wrap: wrap;
+}
+
+.fc-footer-links > a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 16px;
 }
 
 .fc-footer-links a:hover {
@@ -1008,6 +1070,11 @@ a {
 	.fc-footer-inner {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	.fc-footer-status,
+	.fc-footer-links {
+		justify-content: flex-start;
 	}
 }
 
