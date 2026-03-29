@@ -63,9 +63,9 @@ export function AnimatedMicroflow({ className }: { className?: string }) {
 				</svg>
 			</div>
 
-			{/* Panel 2: AI SRE suggestion */}
+			{/* Panel 2: AI guidance suggestion */}
 			<div className={`microflow-panel ${visible(3)}`}>
-				<div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5 text-[var(--black-alpha-48)]">AI SRE</div>
+				<div className="text-[10px] font-semibold uppercase tracking-widest mb-1.5 text-[var(--black-alpha-48)]">AI guidance</div>
 				<div className={`flex flex-col gap-1.5 border border-[var(--border-faint)] p-3 text-xs min-w-[200px] ${card}`}>
 					<span className="text-xs font-bold">🔥 suggestion</span>
 					<p className="m-0 text-[11px] leading-snug text-[var(--black-alpha-64)]">

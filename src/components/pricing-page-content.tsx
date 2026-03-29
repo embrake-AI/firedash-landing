@@ -12,20 +12,20 @@ const pricingIncludes = [
 ] as const;
 
 const includedFeatures = [
-	"Slack-native incident declaration and tracking",
+	"Slack-native fire declaration and tracking",
 	"Routing, escalation, and ownership automation",
-	"AI suggestions for triage and incident updates",
-	"Incident timeline and recap generation",
+	"AI suggestions for triage and customer updates",
+	"Timeline and recap generation",
 	"Public status pages at no extra cost",
 	"Guided onboarding setup session",
 ];
 
-const paidSeatDefinition = ["Engineers included in on-call rotations", "Responders in escalation policies", "People actively handling incidents"];
+const paidSeatDefinition = ["Engineers included in active fire rotations", "Responders in routing or escalation rules", "People actively handling fires"];
 
-const freeAccessDefinition = ["View-only users and stakeholders", "Support and leadership viewers", "Billing contacts and admins not in rotation", "People reading status pages"];
+const freeAccessDefinition = ["View-only users and stakeholders", "Support and leadership viewers", "Billing contacts and admins outside the rotation", "People reading status pages"];
 
-const seatCounts = [6, 9, 12];
-const teamSizes = [20, 34, 50];
+const seatCounts = [3, 5, 7];
+const teamSizes = [10, 16, 24];
 
 /* ── Helpers ── */
 
@@ -52,7 +52,7 @@ function SectionHead({ index, label, title, description }: { index: string; labe
 export function PricingPageContent() {
 	const [discount, setDiscount] = useDiscount();
 	const price = discount ? 5 : 10;
-	const note = discount ? "50% startup discount. Same features, lower barrier." : "If you don\u2019t run incidents, you don\u2019t pay.";
+	const note = discount ? "50% startup discount. Same features, lower barrier." : "Only the people carrying the fire load are billable.";
 
 	const scenarios = seatCounts.map((seats, i) => ({
 		team: `${teamSizes[i]} team members`,

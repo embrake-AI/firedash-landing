@@ -7,9 +7,9 @@ import { bookingUrl, loginUrl } from "@/lib/site";
 
 const solutions = [
 	{ href: "/solutions/slack-triage", label: "Slack triage" },
-	{ href: "/solutions/ai-sre", label: "AI SRE" },
+	{ href: "/solutions/ai-guidance", label: "AI guidance" },
 	{ href: "/solutions/status-pages", label: "Status pages" },
-	{ href: "/solutions/post-incidents", label: "Post-incidents" },
+	{ href: "/solutions/recaps", label: "Recaps" },
 ] as const;
 
 export function SiteHeader() {
@@ -30,9 +30,9 @@ export function SiteHeader() {
 		<header className="fc-header">
 			<div className="fc-header-delimiter" aria-hidden />
 			<div className="fc-shell fc-header-shell">
-				<Link href="/" className="fc-brand" aria-label="Fire home">
+				<Link href="/" className="fc-brand" aria-label="FireDash home">
 					<FireGlyph className="fc-brand-mark" />
-					<span>Fire</span>
+					<span>FireDash</span>
 				</Link>
 
 				<nav className="fc-nav" aria-label="Primary">

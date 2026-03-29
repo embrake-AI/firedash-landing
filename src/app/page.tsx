@@ -12,17 +12,17 @@ import { bookingUrl, demoUrl } from "@/lib/site";
 const functionality = [
 	{
 		title: "Slack triage",
-		description: "Assign, escalate, and update incidents without leaving Slack. No extra dashboards, no context switching.",
+		description: "Assign, escalate, and track fires without leaving Slack. No extra dashboards, no context switching.",
 		href: "/solutions/slack-triage",
 	},
 	{
-		title: "AI SRE",
-		description: "An AI agent that suggests next steps based on incident context. Guides responders — never acts on its own.",
-		href: "/solutions/ai-sre",
+		title: "AI guidance",
+		description: "An AI agent that suggests next steps based on context. Guides any engineer to resolution — never acts on its own.",
+		href: "/solutions/ai-guidance",
 	},
 	{
 		title: "Status pages",
-		description: "Publish customer-facing updates directly from the incident thread — no copy-paste, no parallel workflows.",
+		description: "Keep customers informed directly from the Slack thread — no copy-paste, no parallel workflows.",
 		href: "/solutions/status-pages",
 	},
 ] as const;
@@ -38,11 +38,15 @@ const faq = [
 	},
 	{
 		q: "Does the AI take actions automatically?",
-		a: "No. The AI SRE suggests next steps based on the incident context, but every action is taken by a human. It guides — it doesn't override.",
+		a: "No. The AI suggests next steps based on context, but every action is taken by a human. It guides — it doesn't override.",
 	},
 	{
-		q: "Does Fire replace PagerDuty?",
-		a: "Fire handles incident coordination, not alerting (yet). Most teams use it alongside their existing alerting stack.",
+		q: "We already use PagerDuty / Opsgenie — why do we need Fire?",
+		a: "Those tools handle critical alerts and paging. Fire handles the 90% of daily issues that never reach them — broken demos, blocked onboarding, 'hey, this is broken' moments that live in Slack. Most teams use Fire alongside their existing alerting stack.",
+	},
+	{
+		q: "We just use a Slack channel for this stuff.",
+		a: "That works great until you split into teams or grow past ~8 engineers. Then coordination breaks, things slip through, and the same people get pinged for everything. Fire adds structure without adding process.",
 	},
 	{
 		q: "How long does setup take?",
@@ -79,11 +83,11 @@ export default function Home() {
 			<section className="fc-shell fc-panel fc-hero" id="home-hero">
 				<div className="fc-inner fc-center">
 					<h1 className="fc-hero-title">
-						Structure for
+						Handle daily fires once
 						<br />
-						<span className="fc-highlight">fast-moving</span> teams
+						<span className="fc-highlight">Slack stops scaling</span>
 					</h1>
-					<p className="fc-hero-copy">An AI SRE that structures every incident and guides your team to resolution&nbsp;&mdash; so any engineer can respond with confidence.</p>
+					<p className="fc-hero-copy">The missing layer between Slack and incident tools. Fire handles the 90% of daily issues that no one really owns or tracks&nbsp;&mdash; so your team stays focused on shipping.</p>
 					<div className="fc-cta-row">
 						<a href={demoUrl} target="_blank" rel="noopener noreferrer" className="fc-btn fc-btn-primary">
 							Try the demo
@@ -108,20 +112,20 @@ export default function Home() {
 					label="Who Uses Fire"
 					title={
 						<>
-							No SRE team?
+							Your Slack handle worked.
 							<br className="hidden lg:block" />
-							No problem.
+							Until it didn&apos;t.
 						</>
 					}
-					description="Incident structure for teams that ship product, not process."
+					description="Fire is built for CTOs, Heads of Engineering, and founding engineers leading teams of 8–25 engineers through daily customer-driven fire drills."
 				/>
 
 				<div className="fc-inner max-w-[560px] mx-auto">
 					<ul className="list-none p-0 m-0 flex flex-col gap-4">
 						{[
-							{ who: "Lean engineering teams", what: "Rotate on-call without hiring dedicated SREs" },
-							{ who: "Founders and CTOs", what: "See who owns what and how fast it got resolved" },
-							{ who: "Product engineers", what: "Handle incidents in Slack instead of learning another tool" },
+							{ who: "CTOs & Heads of Engineering", what: "Stop routing every issue manually. Fire assigns, tracks, and retains context so you don\u2019t have to." },
+							{ who: "Tech leads & founding engineers", what: "You shouldn\u2019t be the one everyone pings when something breaks." },
+							{ who: "Growing product teams", what: "Keep the team shipping while customer issues still get a clear owner, timeline, and resolution path." },
 						].map((item) => (
 							<li key={item.who} className="flex items-baseline gap-3 text-[15px] leading-relaxed text-[var(--black-alpha-72)]">
 								<span className="shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-[var(--heat-100)]" />
@@ -134,7 +138,7 @@ export default function Home() {
 
 					<div className="mt-8 pt-7 border-t border-[var(--border-faint)]">
 						<p className="m-0 text-sm leading-relaxed text-[var(--black-alpha-48)]">
-							Most teams are running incidents within an hour of installing the Slack app. No migration, no training sessions.
+							Most teams are live within an hour of installing the Slack app. No migration, no training sessions &mdash; Fire layers onto your existing workspace.
 						</p>
 					</div>
 				</div>
@@ -147,9 +151,9 @@ export default function Home() {
 					label="Functionality"
 					title={
 						<>
-							One incident surface.
+							One surface for
 							<br className="hidden lg:block" />
-							Three workflows.
+							every daily fire.
 						</>
 					}
 					description="Triage in Slack, get AI guidance, and keep customers informed — all from one thread."
@@ -277,10 +281,10 @@ export default function Home() {
 			<section className="fc-shell fc-panel fc-panel-dark relative overflow-hidden py-20 max-sm:py-14 text-white text-center" id="cta">
 				<div className="fc-inner fc-center relative z-1">
 					<h2 className="m-0 text-[clamp(28px,4.2vw,44px)] font-medium leading-[1.1] tracking-tight">
-						Your next incident,
+						Your next fire,
 						<br className="hidden lg:block" /> handled well
 					</h2>
-					<p className="mt-3.5 text-base leading-[1.8] text-white/56">Structure when it matters. Clarity from the first message.</p>
+					<p className="mt-3.5 text-base leading-[1.8] text-white/56">Structure when it matters. No more Slack chaos.</p>
 					<div className="fc-cta-row">
 						<a href={demoUrl} target="_blank" rel="noopener noreferrer" className="fc-btn fc-btn-cta-primary">
 							Try the demo

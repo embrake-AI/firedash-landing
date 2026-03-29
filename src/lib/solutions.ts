@@ -20,33 +20,33 @@ export type SolutionDefinition = {
 export const solutions: SolutionDefinition[] = [
 	{
 		slug: "slack-triage",
-		menuLabel: "Slack Triage",
-		shortDescription: "Run the full incident loop without leaving Slack.",
+		menuLabel: "Slack triage",
+		shortDescription: "Handle fires end-to-end without leaving Slack.",
 		title: "Slack Triage",
-		headline: "Triage incidents end-to-end, directly in Slack",
+		headline: "Handle fires end-to-end, directly in Slack",
 		description:
-			"Type @fire in any channel to open an incident. Fire creates a dedicated channel, auto-assigns an owner, and posts Block Kit buttons for every action. Your team sets severity, posts updates, and accepts AI suggestions — all without leaving Slack.",
+			"Type @fire in any channel to open a fire. Fire creates a dedicated channel, auto-assigns an owner, and posts Block Kit buttons for every action. Your team sets severity, posts updates, and accepts AI suggestions — all without leaving Slack.",
 		outcome:
-			"Any engineer can run an incident from the thread where it started",
+			"Any engineer can handle a fire from the thread where it started",
 		exampleTitle: "@fire in any channel starts the loop",
 		exampleContext:
-			"An engineer mentions @fire with a description. Fire creates the incident channel, assigns an owner, and posts the Block Kit card — ready for triage in seconds.",
+			"An engineer mentions @fire with a description. Fire creates a dedicated channel, assigns an owner, and posts the Block Kit card — ready for triage in seconds.",
 		exampleEvents: [
 			"Engineer types @fire in #eng-support with a description of the problem",
-			"Fire creates #inc-db-timeouts-eu, auto-assigns an owner, and posts a Block Kit card with severity, owner, and status",
-			"On-call accepts ownership and triages via Block Kit buttons — no forms, no dashboard",
-			"AI suggestions appear in the thread with Accept / Edit buttons; every message becomes the incident timeline",
+			"Fire creates a dedicated channel, auto-assigns an owner, and posts a Block Kit card with severity, owner, and status",
+			"The assigned responder accepts ownership and triages via Block Kit buttons — no forms, no dashboard",
+			"AI suggestions appear in the thread with Accept / Edit buttons; every message becomes the timeline",
 		],
 		keyPoints: [
-			"@fire in any channel — incidents start from a Slack message, no forms or separate UI",
+			"@fire in any channel — fires start from a Slack message, no forms or separate UI",
 			"Auto-assigns an owner based on alert context and routing rules",
 			"Block Kit buttons for severity, assignment, and status transitions — all actions from the thread",
 			"Accept or edit AI suggestions inline — one click to apply",
-			"Every message in the thread becomes part of the incident timeline — context is never lost",
+			"Every message in the thread becomes part of the timeline — context is never lost",
 		],
 		signalCards: [
 			{
-				label: "Time to structured incident",
+				label: "Time to structured fire",
 				value: "< 30s",
 				note: "from /fire command to #inc-* channel",
 			},
@@ -63,28 +63,28 @@ export const solutions: SolutionDefinition[] = [
 		],
 	},
 	{
-		slug: "ai-sre",
-		menuLabel: "AI SRE",
+		slug: "ai-guidance",
+		menuLabel: "AI guidance",
 		shortDescription:
-			"An AI agent that routes incidents, suggests next steps, and answers questions — all in the thread.",
-		title: "AI SRE",
+			"An AI agent that routes fires, suggests next steps, and answers questions — all in the thread.",
+		title: "AI Guidance",
 		headline: "AI guidance that suggests — never acts on its own",
 		description:
-			"Fire's AI SRE holds the full incident context and works alongside your team in the thread. It routes incidents to the right team, suggests status updates and mitigations, and answers questions about what's happening. Ask it anything, tell it what to do — every action needs human approval.",
+			"Fire's AI holds the full context and works alongside your team in the thread. It routes fires to the right team, suggests status updates and mitigations, and answers questions about what's happening. Ask it anything, tell it what to do — every action needs human approval.",
 		outcome:
-			"Responders get expert-level guidance without needing SRE experience",
+			"Any engineer can respond with confidence, no SRE experience needed",
 		exampleTitle: "Full context, right in the thread",
 		exampleContext:
-			"The AI SRE reads every message and status change. It routes to the right team, suggests next steps, and answers questions — all from the incident channel.",
+			"The AI reads every message and status change. It routes to the right team, suggests next steps, and answers questions — all from the thread.",
 		exampleEvents: [
-			"On-call creates the incident from Slack — Fire routes it to the right team based on context",
-			"AI SRE suggests updating status to mitigating with a drafted message — engineer clicks Apply",
+			"Someone flags a fire in Slack — Fire routes it to the right team based on context",
+			"AI suggests updating status to mitigating with a drafted message — engineer clicks Apply",
 			"Engineer asks @fire a question in the thread — AI responds with data and analysis",
 			"AI suggests a status page update — engineer edits the draft and publishes",
 			"Every suggestion has Apply / Edit buttons — the AI never acts on its own",
 		],
 		keyPoints: [
-			"Routes incidents to the right team based on alert context and service ownership",
+			"Routes fires to the right team based on context and service ownership",
 			"Suggests status updates and mitigations as the situation evolves",
 			"Ask questions in the thread — @fire responds with data and analysis",
 			"Tell it to draft updates, and it posts them for your approval",
@@ -97,14 +97,14 @@ export const solutions: SolutionDefinition[] = [
 				note: "one-click to accept or modify",
 			},
 			{
-				label: "Context window",
+				label: "Context awareness",
 				value: "Full timeline",
 				note: "every message and status change",
 			},
 			{
 				label: "Autonomous actions",
 				value: "Zero",
-				note: "AI suggests, humans decide",
+				note: "AI guides, humans decide",
 			},
 		],
 	},
@@ -112,24 +112,24 @@ export const solutions: SolutionDefinition[] = [
 		slug: "status-pages",
 		menuLabel: "Status Pages",
 		shortDescription:
-			"Clean, branded status pages updated directly from the incident thread.",
+			"Clean, branded status pages updated directly from the Slack thread.",
 		title: "Status Pages",
-		headline: "Publish status updates from the incident thread",
+		headline: "Publish status updates from the Slack thread",
 		description:
-			"Fire gives you clean, branded status pages that update from the incident thread. The AI drafts customer-facing messages as the incident progresses — review and publish without leaving Slack. Component-level statuses, incident timelines, and historical incidents, all kept in sync automatically.",
+			"Fire gives you clean, branded status pages that update from the Slack thread. The AI drafts customer-facing messages as the fire progresses — review and publish without leaving Slack. Component-level statuses, timelines, and history, all kept in sync automatically.",
 		outcome: "Customers stay informed without adding work for the responder",
 		exampleTitle: "Clean branded pages, updated from Slack",
 		exampleContext:
-			"Status pages stay in sync with the incident thread. The AI drafts updates, you review and publish — no context switching.",
+			"Status pages stay in sync with the Slack thread. The AI drafts updates, you review and publish — no context switching.",
 		exampleEvents: [
-			"Engineer opens the incident from Slack and sets it to medium severity",
+			"Engineer opens the fire from Slack and sets it to medium severity",
 			"Fire auto-drafts a status page update — team reviews in the thread",
 			"Engineer clicks Publish — the status page goes live with component status set to degraded",
 			"After the fix deploys, Fire drafts the resolution update and publishes it after approval",
 		],
 		keyPoints: [
-			"Publish status updates directly from the Slack incident thread",
-			"AI auto-drafts customer-facing updates as the incident progresses",
+			"Publish status updates directly from the Slack thread",
+			"AI auto-drafts customer-facing updates as the fire progresses",
 			"Component-level statuses: operational, degraded, outage",
 			"Clean, branded page with incident timeline and historical incidents",
 			"Historical incidents appear automatically after resolution",
@@ -138,12 +138,12 @@ export const solutions: SolutionDefinition[] = [
 			{
 				label: "Publish workflow",
 				value: "From Slack",
-				note: "review and publish in the incident thread",
+				note: "review and publish in the thread",
 			},
 			{
 				label: "Update drafting",
 				value: "Automatic",
-				note: "based on incident timeline and status",
+				note: "based on timeline and status changes",
 			},
 			{
 				label: "Extra cost",
@@ -153,41 +153,41 @@ export const solutions: SolutionDefinition[] = [
 		],
 	},
 	{
-		slug: "post-incidents",
-		menuLabel: "Post-Incidents",
+		slug: "recaps",
+		menuLabel: "Recaps",
 		shortDescription:
-			"Auto-generated post-mortems that surface patterns from past incidents.",
-		title: "Post-Incidents",
-		headline: "Learn from every incident, automatically",
+			"Auto-generated post-mortems that surface patterns from past fires.",
+		title: "Recaps",
+		headline: "Learn from every fire, automatically",
 		description:
-			"After resolution, Fire auto-generates a post-mortem with timeline, root cause, and action items. It surfaces patterns across past incidents and suggests runbook actions — no manual writing needed.",
-		outcome: "Every incident makes the next one faster",
+			"After resolution, Fire auto-generates a post-mortem with timeline, root cause, and action items. It surfaces patterns across past fires and suggests runbook actions — no manual writing needed.",
+		outcome: "Every fire makes the next one faster",
 		exampleTitle: "Post-mortem, generated on resolution",
 		exampleContext:
-			"When an incident resolves, Fire compiles everything — timeline, root cause, action items — and cross-references past incidents to surface patterns.",
+			"When a fire resolves, Fire compiles everything — timeline, root cause, action items — and cross-references past fires to surface patterns.",
 		exampleEvents: [
-			"Incident resolves — Fire auto-generates a post-mortem from the full timeline",
+			"Fire resolves — a post-mortem is auto-generated from the full timeline",
 			"Root cause analysis drafted from thread context and linked alerts",
 			"Action items extracted with suggested owners based on service ownership",
-			"Fire flags two similar past incidents and what was done to prevent recurrence",
+			"Fire flags two similar past fires and what was done to prevent recurrence",
 		],
 		keyPoints: [
 			"Auto-generated post-mortem on resolution — no manual writing",
-			"Timeline, root cause, and action items compiled from the incident thread",
-			"Patterns detected across past incidents automatically",
-			"Suggested actions from similar past incidents and runbook history",
+			"Timeline, root cause, and action items compiled from the thread",
+			"Patterns detected across past fires automatically",
+			"Suggested actions from similar past fires and runbook history",
 			"Export and share with the team in one click",
 		],
 		signalCards: [
 			{
 				label: "Post-mortem generation",
 				value: "Automatic",
-				note: "generated on incident resolution",
+				note: "generated on fire resolution",
 			},
 			{
 				label: "Pattern detection",
-				value: "Cross-incident",
-				note: "surfaces similar past incidents",
+				value: "Across fires",
+				note: "surfaces similar past fires",
 			},
 			{
 				label: "Manual writing",

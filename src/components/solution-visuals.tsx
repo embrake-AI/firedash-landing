@@ -669,11 +669,11 @@ export function SolutionVisual({ slug }: { slug: string }) {
 	switch (slug) {
 		case "slack-triage":
 			return <SlackTriageVisual />;
-		case "ai-sre":
+		case "ai-guidance":
 			return <AiSreVisual />;
 		case "status-pages":
 			return <StatusPageVisual />;
-		case "post-incidents":
+		case "recaps":
 			return <PostIncidentsVisual />;
 		default:
 			return null;

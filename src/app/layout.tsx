@@ -6,13 +6,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
 	title: {
-		default: "Fire | Structure for Fast-Moving Teams",
-		template: "%s | Fire",
+		default: "FireDash | Handle daily fires once Slack stops scaling",
+		template: "%s | FireDash",
 	},
-	description: "An AI SRE that structures every incident and guides your team to resolution — so any engineer can respond with confidence.",
+	description: "The missing layer between Slack and incident tools. Fire handles the daily 'hey, this is broken' moments that no one really owns or tracks.",
 	openGraph: {
-		title: "Fire | Structure for Fast-Moving Teams",
-		description: "An AI SRE that structures every incident and guides your team to resolution — so any engineer can respond with confidence.",
+		title: "FireDash | Handle daily fires once Slack stops scaling",
+		description: "The missing layer between Slack and incident tools. Fire handles the daily 'hey, this is broken' moments that no one really owns or tracks.",
 		type: "website",
 	},
 	icons: {
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<main>{children}</main>
 				<footer className="fc-footer">
 					<div className="fc-shell fc-footer-inner">
-						<p>© {new Date().getFullYear()} Fire. All rights reserved.</p>
+						<p>© {new Date().getFullYear()} FireDash. All rights reserved.</p>
 						<div className="fc-footer-status">
 							<SystemStatusLink />
 						</div>

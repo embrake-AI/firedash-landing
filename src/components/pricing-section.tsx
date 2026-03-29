@@ -11,7 +11,7 @@ const pricingIncludes = [
 export function PricingSection() {
 	const [discount, setDiscount] = useDiscount();
 	const price = discount ? 5 : 10;
-	const note = discount ? "50% startup discount. Same features, lower barrier." : "If you don\u2019t run incidents, you don\u2019t pay.";
+	const note = discount ? "50% startup discount. Same features, lower barrier." : "Only the people carrying the fire load are billable.";
 
 	return (
 		<>

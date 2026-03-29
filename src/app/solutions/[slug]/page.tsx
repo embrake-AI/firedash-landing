@@ -146,10 +146,10 @@ export default async function SolutionDetailPage({ params }: PageProps) {
 			<section className="fc-shell fc-panel fc-panel-dark relative overflow-hidden py-20 max-sm:py-14 text-white text-center">
 				<div className="fc-inner fc-center relative z-1">
 					<h2 className="m-0 text-[clamp(28px,4.2vw,44px)] font-medium leading-[1.1] tracking-tight">
-						Your next incident,
+						Your next fire,
 						<br className="hidden lg:block" /> handled well
 					</h2>
-					<p className="mt-3.5 text-base leading-[1.8] text-white/56">Structure when it matters. Clarity from the first message.</p>
+					<p className="mt-3.5 text-base leading-[1.8] text-white/56">Structure when it matters. No more Slack chaos.</p>
 					<div className="fc-cta-row">
 						<a href={demoUrl} target="_blank" rel="noopener noreferrer" className="fc-btn fc-btn-cta-primary">
 							Try the demo

@@ -22,17 +22,17 @@ const sections: TermsSection[] = [
 	{
 		title: "1. Company Information",
 		paragraphs: [
-			'FireDash is operated by Miquel Puig i Turón, registered in Spain (hereinafter "FireDash", "we", "us", or "our").',
-			'These Terms and Conditions ("Terms") govern access to and use of the FireDash incident management software (the "Service").',
+			'FireDash is operated by Miquel Puig i Turón, registered in Spain (hereinafter "FireDash", "Fire", "we", "us", or "our").',
+			'These Terms and Conditions ("Terms") govern access to and use of the FireDash service (the "Service").',
 			'By accessing or using the Service, the customer ("Customer", "you") agrees to be bound by these Terms.',
 		],
 	},
 	{
 		title: "2. Service Description",
 		paragraphs: [
-			"FireDash provides a cloud-based incident management platform that allows organizations to record, manage, and track operational incidents.",
+			"Fire provides a cloud-based service that helps organizations handle daily engineering fires, coordinate responders, and publish status updates.",
 			"The Service is provided as a subscription-based software-as-a-service (SaaS) solution.",
-			"FireDash may modify, improve, or update the Service at its discretion.",
+			"Fire may modify, improve, or update the Service at its discretion.",
 		],
 	},
 	{
@@ -41,12 +41,12 @@ const sections: TermsSection[] = [
 	},
 	{
 		title: "4. Accounts",
-		paragraphs: ["Accounts are created by FireDash for Customers.", "You are responsible for:"],
+		paragraphs: ["Accounts are created by Fire for Customers.", "You are responsible for:"],
 		bullets: ["Maintaining the confidentiality of login credentials", "All activity under your account", "Ensuring users comply with these Terms"],
 		subsections: [
 			{
 				title: "",
-				paragraphs: ["You must notify FireDash immediately of any unauthorized use.", "We reserve the right to suspend accounts that violate these Terms."],
+				paragraphs: ["You must notify Fire immediately of any unauthorized use.", "We reserve the right to suspend accounts that violate these Terms."],
 			},
 		],
 	},
@@ -92,14 +92,14 @@ const sections: TermsSection[] = [
 			},
 			{
 				title: "",
-				paragraphs: ["FireDash does not review or monitor Customer Data."],
+				paragraphs: ["Fire does not review or monitor Customer Data except as needed to operate and support the Service."],
 			},
 		],
 	},
 	{
 		title: "7. Personal Data",
 		paragraphs: [
-			"FireDash processes limited personal data (such as name and email) when provided via SSO or account creation.",
+			"Fire processes limited personal data (such as name and email) when provided via SSO or account creation.",
 			"Personal data is processed in accordance with our Privacy Policy and applicable data protection laws, including the General Data Protection Regulation (GDPR).",
 		],
 	},
@@ -110,14 +110,14 @@ const sections: TermsSection[] = [
 		subsections: [
 			{
 				title: "",
-				paragraphs: ["FireDash reserves the right to suspend accounts engaging in prohibited conduct."],
+				paragraphs: ["Fire reserves the right to suspend accounts engaging in prohibited conduct."],
 			},
 		],
 	},
 	{
 		title: "9. Intellectual Property",
 		paragraphs: [
-			"All rights, title, and interest in the Service, including software, branding, and content, remain the exclusive property of FireDash.",
+			"All rights, title, and interest in the Service, including software, branding, and content, remain the exclusive property of Fire.",
 			"These Terms do not grant you ownership of the Service, only a limited, non-exclusive, non-transferable license to use it during the subscription period.",
 		],
 	},
@@ -125,7 +125,7 @@ const sections: TermsSection[] = [
 		title: "10. Service Availability",
 		paragraphs: [
 			'The Service is provided on an "as is" and "as available" basis.',
-			"FireDash does not guarantee uninterrupted or error-free operation.",
+			"Fire does not guarantee uninterrupted or error-free operation.",
 			"We may suspend the Service for maintenance, updates, or technical reasons.",
 		],
 	},
@@ -134,7 +134,7 @@ const sections: TermsSection[] = [
 		paragraphs: ["To the maximum extent permitted by law:"],
 		bullets: [
 			"The Service is provided without warranties of any kind",
-			"FireDash disclaims all implied warranties, including fitness for a particular purpose and non-infringement",
+			"Fire disclaims all implied warranties, including fitness for a particular purpose and non-infringement",
 			"You use the Service at your own risk",
 		],
 	},
@@ -142,19 +142,19 @@ const sections: TermsSection[] = [
 		title: "12. Limitation of Liability",
 		paragraphs: ["To the maximum extent permitted by law:"],
 		bullets: [
-			"FireDash shall not be liable for indirect, incidental, or consequential damages",
-			"FireDash shall not be liable for loss of profits, loss of data, or business interruption",
-			"FireDash's total liability under these Terms shall not exceed the total amount paid by the Customer in the twelve (12) months preceding the claim",
+			"Fire shall not be liable for indirect, incidental, or consequential damages",
+			"Fire shall not be liable for loss of profits, loss of data, or business interruption",
+			"Fire's total liability under these Terms shall not exceed the total amount paid by the Customer in the twelve (12) months preceding the claim",
 		],
 	},
 	{
 		title: "13. Indemnification",
-		paragraphs: ["You agree to indemnify and hold harmless FireDash from any claims, damages, or losses arising from:"],
+		paragraphs: ["You agree to indemnify and hold harmless Fire from any claims, damages, or losses arising from:"],
 		bullets: ["Your use of the Service", "Your Customer Data", "Your violation of these Terms"],
 	},
 	{
 		title: "14. Termination",
-		paragraphs: ["FireDash may suspend or terminate access if:"],
+		paragraphs: ["Fire may suspend or terminate access if:"],
 		bullets: ["You breach these Terms", "Payments fail", "You misuse the Service"],
 		subsections: [
 			{
@@ -165,7 +165,7 @@ const sections: TermsSection[] = [
 	},
 	{
 		title: "15. Changes to the Terms",
-		paragraphs: ["FireDash may update these Terms at any time.", "Continued use of the Service after changes constitutes acceptance of the updated Terms."],
+		paragraphs: ["Fire may update these Terms at any time.", "Continued use of the Service after changes constitutes acceptance of the updated Terms."],
 	},
 	{
 		title: "16. Governing Law and Jurisdiction",
@@ -177,7 +177,7 @@ export default function TermsPage() {
 	return (
 		<div className="mx-auto w-full max-w-4xl px-6 pb-24 pt-12 md:pt-16">
 			<section className="rounded-[30px] border border-[#dbe3ed] bg-[#ffffff] p-8 md:p-10">
-				<p className="font-mono text-xs uppercase tracking-[0.2em] text-[#64748b]">FireDash</p>
+					<p className="font-mono text-xs uppercase tracking-[0.2em] text-[#64748b]">FireDash</p>
 				<h1 className="mt-3 text-4xl leading-tight font-semibold tracking-tight text-[#0f172a] md:text-5xl">Terms and Conditions</h1>
 				<p className="mt-3 text-sm text-[#64748b]">Last updated: February 27, 2026</p>
 

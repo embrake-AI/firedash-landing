@@ -3,14 +3,14 @@ import { bookingUrl, demoUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
 	title: "About",
-	description: "Why Fire exists and what we are building for growing engineering teams.",
+	description: "Why Fire exists — built to handle the daily engineering fires that Slack can't scale.",
 };
 
 const principles = [
-	"Keep incident workflows close to where teams already communicate",
-	"Add clarity without adding heavyweight process",
+	"Keep fire handling close to where teams already communicate",
+	"Add structure without adding heavyweight process",
 	"Use AI for practical guidance, never for hype",
-	"Help teams recover quickly and keep shipping",
+	"Help growing teams stay fast and keep shipping",
 ];
 
 export default function AboutPage() {
@@ -21,9 +21,9 @@ export default function AboutPage() {
 				<div className="fc-inner">
 					<div className="inline-flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-wider text-[var(--black-alpha-48)]">About</div>
 					<h1 className="fc-section-title">
-						Built from real incident pain
+						When we grew past 3 engineers,
 						<br className="hidden lg:block" />
-						at a <span className="fc-highlight">growing startup</span>
+						<span className="fc-highlight">Slack broke</span>
 					</h1>
 					<p className="mt-4 max-w-[680px] text-base leading-relaxed text-[var(--black-alpha-64)]">
 						I am an engineer at{" "}
@@ -35,7 +35,7 @@ export default function AboutPage() {
 						>
 							Enginy
 						</a>
-						. We kept hitting the same pattern: small incidents stealing focus, Slack threads getting noisy, and no lightweight tool that fit teams our size.
+						. We had a single Slack handle for fires — it worked at 3 people but completely broke at 10+. Daily issues like broken demos, blocked onboarding, and &ldquo;hey, this is broken&rdquo; moments were drowning us. No one owned them, no one tracked them.
 					</p>
 				</div>
 			</section>
@@ -47,13 +47,13 @@ export default function AboutPage() {
 						<div>
 							<div className="inline-flex items-center gap-2.5 font-mono text-[11px] font-medium uppercase tracking-wider text-[var(--black-alpha-48)]">What Was Missing</div>
 							<h2 className="mt-4 text-[clamp(28px,4.2vw,40px)] font-medium leading-[1.1] tracking-tight">
-								Most tools were either
-								<br className="hidden lg:block" /> too light or too heavy
+								The missing layer between
+								<br className="hidden lg:block" /> Slack and incident tools
 							</h2>
 							<p className="mt-4 text-[15px] leading-relaxed text-[var(--black-alpha-64)]">
-								Ticketing tools were too slow for active incidents. Enterprise incident platforms felt like adopting an entire SRE org before we needed one.
+								Ticketing tools were too slow for daily fires. Enterprise incident platforms were built for rare catastrophic outages, not the constant stream of broken demos and blocked onboarding.
 							</p>
-							<p className="mt-3 text-[15px] leading-relaxed text-[var(--black-alpha-64)]">Fire is the middle path: real ownership, real timelines, and less process drag.</p>
+							<p className="mt-3 text-[15px] leading-relaxed text-[var(--black-alpha-64)]">Fire handles the 90% of daily issues that never reach PagerDuty — coordination, tracking, knowledge routing, without the process overhead.</p>
 						</div>
 
 						<div>
