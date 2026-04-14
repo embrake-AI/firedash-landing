@@ -10,6 +10,6 @@ export const demoUrl = "https://demo.firedash.ai";
 
 export const loginUrl = "https://app.firedash.ai";
 
-export const bookingUrl = "https://calendar.app.google/35h3GfeqezhwCUE27";
+export const bookingUrl = "https://calendar.app.google/Gvwd21so272JTGe7A";
 
 export const statusPageUrl = "https://status.enginy.ai";
